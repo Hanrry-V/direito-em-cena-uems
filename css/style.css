@@ -1,0 +1,221 @@
+/* Reset Básico para que o site pareça igual em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 1. Estilo do Cabeçalho e Navegação */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Cor de destaque */
+}
+
+/* 2. Estilo da Seção Principal (Hero/Banner) - AGORA COM IMAGEM DE FUNDO */
+.hero {
+    color: #fff; /* Mantém o texto branco para contraste */
+    padding: 60px 20px;
+    text-align: center;
+    
+    /* ALTERAÇÃO FEITA AQUI: Substitui a cor fixa pela imagem de fundo e adiciona filtro escuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/papeldeparedesite.jpg') no-repeat center center/cover;
+    
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Garante que a imagem seja visível */
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.hero button {
+    background: #f4f4f9;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: #ddd;
+}
+
+/* 3. Estilo da Seção de Acervo de Posts (O GRID!) */
+
+.acervo-posts {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.acervo-posts h3 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Container que organiza os cards em grid (colunas) */
+.card-container {
+    display: grid;
+    /* Faz o layout se adaptar para colocar o máximo de colunas de 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    margin-top: 20px;
+    /* Alinha o grid ao centro */
+    justify-content: center;
+}
+
+/* Estilo para cada bloco de post */
+.post-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    display: block; 
+    text-align: left; /* Título e texto alinhados à esquerda, como um blog */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da Imagem de Capa */
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilo do Título e Categoria */
+.post-card h4 {
+    padding: 10px 15px 5px 15px;
+    font-size: 1.1rem;
+}
+
+.post-card .category {
+    font-size: 0.85rem;
+    color: #00bcd4; 
+    padding: 0 15px 15px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+/* 4. Estilo do Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+}
+
+/* Estilos para as Páginas de Conteúdo (Sobre, Contato, Podcasts) */
+.page-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.page-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.page-content h3 {
+    color: #00bcd4;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.page-content p.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Estilos Específicos para o Formulário de Contato */
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.contact-form button[type="submit"] {
+    background: #00bcd4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: #008fa3;
+}

@@ -1,0 +1,34 @@
+    [
+        {
+            "id": 1,
+            "titulo": "Análise: Justiça e Criminalidade em Tropa de Elite",
+            "categoria": "Direito Penal",
+            "link_detalhe": "posts/tropa-elite.html",
+            "imagem": "images/tropa_elite_capa.jpg",
+            "autoria": "principal"
+        },
+        {
+            "id": 2,
+            "titulo": "Podcast #1: Racismo e o Estatuto da Igualdade Racial",
+            "categoria": "Direitos Humanos",
+            "link_detalhe": "posts/racismo-estatuto.html",
+            "imagem": "images/diario_detento_capa.jpg",
+            "autoria": "principal"
+        },
+        {
+            "id": 3,
+            "titulo": "Resenha Crítica: Legislação e Desigualdade Social",
+            "categoria": "ODS 10",
+            "link_detalhe": "posts/desigualdade-social.html",
+            "imagem": "images/que_horas_capa.jpg",
+            "autoria": "principal"
+        },
+        {
+            "id": 4,
+            "titulo": "Exclusão Social em Que Horas Ela Volta?",
+            "categoria": "Direito Civil/Trabalhista",
+            "link_detalhe": "posts/exclusao-social.html",
+            "imagem": "images/que_horas_capa.jpg",
+            "autoria": "principal"
+        }
+    ]
